@@ -10,7 +10,7 @@
     <a href="./index.html">
     <button class="back">Volver</button>
     </a>
-    <div clase="contenido">
+    <div class="contenido">
         <h1>Ingresa el password</h1>
         <div class="numeros">
             <select name="number1" id="number1">
@@ -47,25 +47,25 @@
                 <option value="9">9</option>
             </select>
             </div> 
+            <button
+                onclick="
+                    var number1 = document.querySelector('#number1').value
+                    var number2 = document.querySelector('#number2').value
+                    var number3 = document.querySelector('#number3').value
+                    var respuesta = document.querySelector('h3')
+
+                    var password = number1 + number2 + number3
+
+                    if (password == 911) {
+                    respuesta.innerHTML = 'Password 1 correcto 🥳';
+                    }else if (password == 714) {
+                    respuesta.innerHTML = 'Password 2 correcto 🥳';
+                    }else{
+                    respuesta.innerHTML = 'Password incorrecto 🔐'
+                }"> Ingresar </button>
+
+            <h3></h3>
         </div>
-        <button
-            onclick="
-                var number1 = document.querySelector('#number1').value
-                var number2 = document.querySelector('#number2').value
-                var number3 = document.querySelector('#number3').value
-                var respuesta = document.querySelector('h3')
-
-                var password = number1 + number2 + number3
-
-                if (password == 911) {
-                respuesta.innerHTML = 'Password 1 correcto 🥳';
-                }else if (password == 714) {
-                respuesta.innerHTML = 'Password 2 correcto 🥳';
-                }else{
-                respuesta.innerHTML = 'Password incorrecto 🔐'
-            }"> Ingresar </button>
-
-        <h3></h3>
     </div>
     <script src="./assets/js/script.js"></script>
 </body>

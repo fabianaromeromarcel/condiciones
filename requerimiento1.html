@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <img class=imagen id="imagen" style="width: 800px;" src="./assets/img/Nighthawks_by_Edward_Hopper_1942.jpg" alt="Nighthawks by Edward Hopper"
-    onclick="
-    var imagen = document.querySelector('#imagen')
-    if (imagen.style.border == '') {
-        imagen.style.border = '2px solid red'
-    }else{
-        imagen.style.border = ''
-    }">
-<h2></h2>
+    <a href="./index.html">
+    <button class="back">Volver</button>
+    </a>
+    <div class="contenido">
+        <h1>Haz click en la imagen</h1>
+        <img class=imagen id="imagen" src="./assets/img/Nighthawks_by_Edward_Hopper_1942.jpg" alt="Nighthawks by Edward Hopper"
+        onclick="
+        var imagen = document.querySelector('#imagen')
+        if (imagen.style.border == '') {
+            imagen.style.border = '2px solid red'
+        }else{
+            imagen.style.border = ''
+        }">
+    </div>
+    
 </body>
 </html>
