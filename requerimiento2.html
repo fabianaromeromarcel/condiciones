@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimiento 2</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <a href="./index.html">
+    <button class="back">Volver</button>
+    </a>
+    <h1>Puedes llevar hasta 10 stickers</h1>
+    <div class="stickers">
+        <div class="input">
+            <img class="img" src="./assets/img/Sticker1.jpg" alt="Edward Hopper 1">
+            <input
+            type="number"
+            id="sticker1"
+            placeholder="Ingresa cantidad"
+            />
+        </div> 
+        <div class="input">
+            <img class="img" src="./assets/img/Sticker2.jpeg" alt="Edward Hopper 1">
+            <input
+            type="number"
+            id="sticker2"
+            placeholder="Ingresa cantidad"
+            />
+        </div>
+        <div class="input">
+            <img class="img" src="./assets/img/Sticker3.jpeg" alt="Edward Hopper 1">
+            <input
+            type="number"
+            id="sticker3"
+            placeholder="Ingresa cantidad"
+            />
+        </div> 
+    </div>
+    <h3></h3>
+    <button
+        onclick="
+            var sticker1 = Number(document.querySelector('#sticker1').value)
+            var sticker2 = Number(document.querySelector('#sticker2').value)
+            var sticker3 = Number(document.querySelector('#sticker3').value)
+            var respuesta = document.querySelector('h3')
+
+            var stickersTotal = sticker1 + sticker2 + sticker3;
+
+            if (stickersTotal < 0 || sticker1 < 0 ||  sticker2 < 0 || sticker3 < 0) {
+            respuesta.innerHTML = '¿Nos quieres regalar stickers? 🫪 Por favor, ingresa solo números positivos 🥳';
+            }else if (stickersTotal == 1) {
+            respuesta.innerHTML = 'Llevas ' + stickersTotal + ' sticker de 10 🖖';
+            }else if (stickersTotal <= 10) {
+            respuesta.innerHTML = 'Llevas ' + stickersTotal + ' stickers de 10 🖖';
+            }else{
+            respuesta.innerHTML = 'Llevas demasiados stickers, no te aproveches 🙄'
+        }"> Verificar </button>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
